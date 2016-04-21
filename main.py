@@ -40,11 +40,12 @@ for each_line in novel_text:
 		if cleaned_word in color_reference:
 			# if it does, we increment the count for that word in our meta_color_count dictionary
 			meta_color_count[cleaned_word] = meta_color_count.get(cleaned_word, 0) + 1
+		# now we check for the more specialized words by checking the values in color_reference
 		for key, value in color_reference.iteritems():
+			secondary_color_count[key] = {}
 			for option in value:
 				if option == cleaned_word:
-					secondary_color_count[key][option] = secondary_color_count.get(([key][option]), 0) + 1
-
+					secondary_color_count[key][option] = 0
 
 print "***** Analysis for" , novel, "*****"
 print "meta color count of the high level groupings of color words (keys): ", meta_color_count
