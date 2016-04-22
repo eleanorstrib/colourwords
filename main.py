@@ -7,7 +7,7 @@ import pprint
 ############ create some variables we'll use in the program ############ 
 # this creates a varible with the name of the file you want to analyze
 # you can add more txt files in the same directory and put the filename here
-novel = "monte_cristo.txt"
+novel = "tess.txt"
 
 # this is a dictionary ({} brackets) with the broad colour name as the key and a couple of 
 # alternate colour names as values in a list (with the [] brackets)
