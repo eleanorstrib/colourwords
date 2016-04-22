@@ -12,23 +12,26 @@ novel = "monte_cristo.txt"
 # this is a dictionary ({} brackets) with the broad colour name as the key and a couple of 
 # alternate colour names as values in a list (with the [] brackets)
 colour_reference = {
-	'red': ['red','cardinal', 'scarlet', 'vermilion', 'terracotta', 'crimson'],
-	'orange': ['orange', 'jacinthe', 'saffron'],
-	'yellow': ['yellow','citrine', 'goldenrod', 'topaz', 'gold'],
-	'green': ['green', 'celadon', 'chlorochrous', 'emerald', 'jade'],
-	'blue': ['blue','periwinkle', 'azure', 'slate', 'sapphire', 'aqua'],
-	'violet': ['violet', 'purple', 'indigo', 'ianthine', 'mauve', 'amethyst', 'eggplant', 'aubergine'],
-	'black' : ['black', 'atrous', 'melanic', 'ebony'],
-	'brown': ['brown', 'tan', 'khaki', 'beige'],
-	'gray' : ['gray', 'grey'],
-	'white' : ['white', 'albicant', 'albugineous', 'ivory', 'ecru'],
+	'red': ['red','cardinal', 'scarlet', 'vermilion', 'terracotta', 'crimson', 'claret', 'brick', 'burgundy', 'cerise', 'cherry', 'henna', 'maroon', 'oxblood', 'sanguine'],
+	'orange': ['orange', 'jacinthe', 'saffron', 'ocher', 'ochre', 'tangerine'],
+	'yellow': ['yellow','citrine', 'goldenrod', 'topaz', 'gold', 'golden', 'apricot', 'blond', 'blonde', 'gamboge', 'lemon', 'maize', 'straw', 'wheat'],
+	'green': ['green', 'celadon', 'chlorochrous', 'emerald', 'jade', 'cobalt', 'olive', 'sage', 'teal', 'verdigris', 'veridity'],
+	'blue': ['blue','periwinkle', 'azure', 'slate', 'sapphire', 'aqua', 'aquamarine', 'cadmium', 'canary', 'cerulean', 'navy', 'turquoise'],
+	'violet': ['violet', 'purple', 'indigo', 'ianthine', 'mauve', 'amethyst', 'eggplant', 'aubergine', 'lavender', 'lilac', 'puce', 'tyrian', 'orchil'],
+	'pink': ['pink', 'rose', 'blush', 'carnation', 'coral', 'fushia', 'salmon'],
+	'black' : ['black', 'atrous', 'melanic', 'ebony', 'jet', 'sable', 'soot'],
+	'brown': ['brown', 'tan', 'khaki', 'beige', 'bronze', 'bronzed', 'buff', 'umber', 'caramel', 'chestnut', 'chocolate', 'coffee', 'copper', 'fawn', 'hazel', 'mustard', 'mahogany', 'mocha', 'sepia', 'taupe', 'tawny', 'topaz'],
+	'gray' : ['gray', 'grey', 'ash', 'ashen', 'charcoal', 'drab', 'heather', 'heathered', 'marble', 'silver', 'argent'],
+	'white' : ['white', 'albicant', 'albugineous', 'ivory', 'ecru', 'alabaster', 'bone', 'chalk', 'frostiness', 'hoariness', 'zinc'],
 }
 # sources: http://phrontistery.info/colours.html, http://www.enchantedlearning.com/wordlist/colours.shtml
+# https://www.vocabulary.com/lists/540059#view=notes
 
 # these two dictionaries will hold our results
 basic_colour_count = {} # keys only
 all_colour_count = {} # values only
 word_count = 0
+pct_count = {}
 
 ############ STEP 2: open the txt files and break them into lists of words we can evaluate ############ 
 # this creates an file called novel_text that we'll break down 
