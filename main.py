@@ -28,6 +28,7 @@ colour_reference = {
 # these two dictionaries will hold our results
 basic_colour_count = {} # keys only
 all_colour_count = {} # values only
+word_count = 0
 
 ############ STEP 2: open the txt files and break them into lists of words we can evaluate ############ 
 # this creates an file called novel_text that we'll break down 
@@ -42,6 +43,7 @@ for each_line in novel_text:
 	
 ############ STEP 3: check each word against our color reference dictionary and count matches ############ 
 	for each_word in line_list: 
+		word_count += 1
 		# this takes each word and removes punctuation, any remaining space and makes it lowercase
 		# e.g. "Walton!" becomes "walton"
 		cleaned_word = re.sub('[^A-Za-z0-9]+', '', each_word).lower()
@@ -72,6 +74,7 @@ for each_line in novel_text:
 pp = pprint.PrettyPrinter(indent=2)
 
 print "***** Analysis for" , novel, "*****"
+print "The word count is: ", word_count
 print "basic colour count for the most common colour words only (keys, eg 'blue', 'red', etc): "
 pp.pprint(basic_colour_count)
 print
